@@ -1,6 +1,8 @@
 import constructionGif from './assets/construction.gif'
 import vibingGif from './assets/vibing.gif'
 import mindblowGif from './assets/mindblow.gif'
+import loadingGif from './assets/loading.gif'
+import * as Tone from 'tone'
 import './Plan.css'
 
 
@@ -105,6 +107,27 @@ function Plan() {
             <br></br><br></br>
             <h5>Let's see what they're about!</h5>
             <br></br><br></br>
+            Web Audio API is a system for controlling audio on the web.
+            <br></br><br></br>
+            It allows users to play back audio, add effects, do synthesis and all kinds of good stuff.
+            <br></br><br></br>
+            Tone.js builds on the Web Audio API and adds sync (important!) and more,
+            and also makes the Web Audio API easier to work with.
+            <br></br><br></br>
+            <br></br><br></br>
+            Basically, all we truly have to focus on is Tone.js and we'll only look under the hood if needed.
+            <br></br><br></br>
+            And so I installed Tone.js by typing "npm i tone" into the terminal
+            <br></br>
+            <img src={loadingGif} className='loading-gif' alt="loading-gif" />
+            <br></br><br></br>
+            We now have Tone.js. It's time to make our first tones.
+            <br></br><br></br>
+
+        
+
+            
+            
 
             
 
