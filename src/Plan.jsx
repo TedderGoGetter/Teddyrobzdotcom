@@ -95,7 +95,18 @@ function Plan() {
             <br></br><br></br>
             For the music app I have no clue. what do people use?
             <br></br><br></br>
-            Deepdiving . . .
+            Well I found this redditor called Valent-in that made a webapp called  
+            <a href='https://valent-in.github.io/pulseq/' target='_blank'> Pulseq </a>
+            <br></br><br></br>
+            It isn't exactly what I'm going for but the underlying tech might be just right.
+            <br></br><br></br>
+            That tech is <a href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API' target='_blank'> Web Audio API </a>
+            and <a href='https://tonejs.github.io/' target='_blank'>Tone.js</a>.
+            <br></br><br></br>
+            <h5>Let's see what they're about!</h5>
+            <br></br><br></br>
+
+            
 
 
 
