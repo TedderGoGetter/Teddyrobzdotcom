@@ -121,8 +121,10 @@ function Plan() {
             <br></br>
             <img src={loadingGif} className='loading-gif' alt="loading-gif" />
             <br></br><br></br>
-            We now have Tone.js. It's time to make our first tones.
+            We now have Tone.js. It's time to make our first tone.
             <br></br><br></br>
+            <button id='first-sound'>Beep</button>
+
 
         
 
