@@ -2,16 +2,16 @@ import constructionGif from './assets/construction.gif'
 import vibingGif from './assets/vibing.gif'
 import mindblowGif from './assets/mindblow.gif'
 import loadingGif from './assets/loading.gif'
+import Synth from './components/synth'
 import * as Tone from 'tone'
 import './Plan.css'
-
 
 function Plan() {
 
     return (
         <>
             hi <br></br>
-            <br></br>
+            <br></br> 
             This website is very much still under construction, and I'm just a junior engineer.
             <br></br><br></br>
             Me working on this code:
@@ -123,12 +123,7 @@ function Plan() {
             <br></br><br></br>
             We now have Tone.js. It's time to make our first tone.
             <br></br><br></br>
-            <button id='first-sound'>Beep</button>
-
-
-        
-
-            
+            <Synth/> 
             
 
             
