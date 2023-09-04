@@ -6,11 +6,14 @@ import * as Tone from 'tone';
 function SynthBeep() {
     console.log(Tone.context.state)
     Tone.start()
-    const synth = new Tone.Synth.toDestination();
     
-    synth.triggerAttackRelease("C5","8n");
+    const synth = new Tone.Synth().toDestination();
 
-    console.log("hi")
+    Tone.loaded().then(() => {
+    synth.triggerAttackRelease("C5","8n")
+    });
+
+    console.log("method has fully run")
 }
 
 // Tone context is whether or not audio has been activated yet.
