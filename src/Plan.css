@@ -1,3 +1,10 @@
 .construction-gif {
     width: 30%;
 }
+
+.unbeeped {
+    display:none;
+}
+.beep-worked {
+    display:inline;
+}
