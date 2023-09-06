@@ -39,6 +39,10 @@ function ShortLoops() {
 
     function PressStop() {
         Tone.Transport.stop();
+        if (beeped != 'unbeeped') {
+            setBeeped('unbeeped')
+        }
+
     }
 
     return (
@@ -48,7 +52,7 @@ function ShortLoops() {
         <button onClick={PressStop}>Stop</button>
         <div className={beeped}>
         <br></br>
-        It'll play infinitely if you don't stop it.
+        (It'll play infinitely if you don't stop it)
         </div>
         </>
     )
