@@ -4,7 +4,10 @@ import mindblowGif from './assets/mindblow.gif'
 import loadingGif from './assets/loading.gif'
 import legoGif from './assets/lego.gif'
 import startGif from './assets/start.gif'
+import timerGif from './assets/timer.gif'
 import Synth from './components/synth'
+import ShortLoops from './components/ShortLoops'
+import LoopDemo from './components/LoopDemo'
 import * as Tone from 'tone'
 import './Plan.css'
 
@@ -181,18 +184,32 @@ function Plan() {
             <br></br><br></br>
             <img src={startGif} className='start-gif' alt="start-gif" />
             <h2>Chapter 4: The backend</h2>
-            
-
-
-            
-            
-            
-            
-
-            
-
-
-
+            <br></br>
+            <h5>4.1: Can we loop these loops?</h5>
+            <br></br>
+            If we can loop these loops then whoop dee whoop.
+            <br></br><br></br>
+            If we can't loop these loops then big big oof.
+            <br></br><br></br>
+            Since I don't know if there will be a max length, we'll start with two practice loops
+            <br></br><br></br>
+            I've selected three loops
+             from my song <a href='https://www.youtube.com/watch?v=6YdSx2h-1so' target='_blank'>Nekkid Pictures </a> and I'll attempt to loop them.
+            <br></br><br></br>
+            Looping is just making a sound play again at the exact time it stops.
+            <br></br><br></br>
+            The difficult part is keeping all your sounds in sync.
+            <br></br><br></br>
+            In digital music this is solved with 'transport'.
+            <br></br><br></br>
+            It's essentially a little guy in the background counting time and telling every sound or instrument when to play.
+            <br></br><br></br>
+            <img src={timerGif} className='timer-gif' alt="timer-gif" />
+            <br></br><br></br>
+            Here we a looped chord.
+            <br></br><br></br>
+            <LoopDemo/>
+            <br></br>
 
 
         </>
