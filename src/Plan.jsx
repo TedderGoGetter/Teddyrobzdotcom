@@ -2,6 +2,8 @@ import constructionGif from './assets/construction.gif'
 import vibingGif from './assets/vibing.gif'
 import mindblowGif from './assets/mindblow.gif'
 import loadingGif from './assets/loading.gif'
+import legoGif from './assets/lego.gif'
+import startGif from './assets/start.gif'
 import Synth from './components/synth'
 import * as Tone from 'tone'
 import './Plan.css'
@@ -40,7 +42,7 @@ function Plan() {
             <br></br><br></br>
             *What do I want from this music player?*
             <br></br>
-            I want to make a music player that has my latest release. 
+            I want to make a music player that has my latest song release. 
             Not only can people play the song but they can also add effects to it.
             The effects should always sound good, there should be no way for the person messing with it to make it ugly.
             After all, it's my job as a music producer and an engineer to curate this experience.
@@ -93,7 +95,7 @@ function Plan() {
             <br></br><br></br>
             <h2>Chapter 2: Tools and build order</h2>
             <br></br><br></br>
-            For the design we'll use figma, I've never used it, but hey.
+            For the design we'll use figma, I've never used it, but hey. I see it on people's resume all the time.
             <br></br><br></br>
             For the music app I have no clue. what do people use?
             <br></br><br></br>
@@ -109,11 +111,14 @@ function Plan() {
             <br></br><br></br>
             Web Audio API is a system for controlling audio on the web.
             <br></br><br></br>
-            It allows users to play back audio, add effects, do synthesis and all kinds of good stuff.
+            It allows users to play back audio, add effects, do synthesis and all kinds of good stuff. It's a little music toolbox.
             <br></br><br></br>
             Tone.js builds on the Web Audio API and adds sync (important!) and more,
-            and also makes the Web Audio API easier to work with.
+            and also makes the Web Audio API easier to work with. 
             <br></br><br></br>
+            Basically it takes the disconnected lego's from Web Audio API and pre-assembles them into houses, cars, etc for us to use in our lego city!
+            <br></br><br></br>
+            <img src={legoGif} className='lego-gif' alt="lego-gif" />
             <br></br><br></br>
             Basically, all we truly have to focus on is Tone.js and we'll only look under the hood if needed.
             <br></br><br></br>
@@ -123,7 +128,64 @@ function Plan() {
             <br></br><br></br>
             We now have Tone.js. It's time to make our first tone.
             <br></br><br></br>
-            <Synth/> 
+            <Synth/>
+            <br></br><br></br>
+            Now the question is, why did it work?
+            <br></br><br></br>
+            Well like I said, tone.js has done the legwork for us and made some synthesizers we can use.
+            In this case I just called one up by typing "new Synth()" and told my Beep button to play a c5 note on said Synth() when clicked.
+            <br></br><br></br>
+            So we've proved that it works! What'snext?
+            <br></br><br></br>
+            <h5>Build order</h5>
+            <br></br><br></br>
+            Apparently all great engineers start with the technical bit (backend) first, and the pretty bit(frontend) after.
+            <br></br><br></br>
+            I suppose they do so to make sure every piece works works before they design it into the product.
+            <br></br><br></br>
+            1. Get my three tracks looping; my instruments, my drums, and my vocals. Add volume faders.
+            <br></br><br></br>
+            2. Create my three effects for them link them to buttons.
+            <br></br><br></br>
+            3. Create my master compressor. This is essentially just an effect that makes sure everything sounds glued together.
+            <br></br>
+            Allmost all commercial songs have one. When I split my song into separate layers that effect has to be readded at the end.
+            <br></br><br></br>
+            4. Fine tune my effects. 
+            <br></br><br></br>
+            5. The ~cool~ bit! Use figma to design all of the buttons and stuff and make everything look real pretty.
+            <br></br><br></br>
+            6. Make the website look like a nice lil' package. 
+            <br></br><br></br>
+            <h2>Chapter 3: Fear</h2>
+            <br></br><br></br>
+            Okay listen up. I'm not saying this is an achievable project. None of this has been tested.
+            <br></br><br></br>
+            I'm just a junior engineer and a music geek. I have no idea if:
+            <br></br><br></br>
+            - Long loops can actually be synced in tonejs
+            <br></br>
+            - Long loops can actually play on people's shitty wifi
+            <br></br>
+            - These loops can be routed together into an effect
+            <br></br>
+            - These effects that I want can be made
+            <br></br>
+            - There can even be a master effect to make it all sound juicy
+            <br></br>
+            - I even have the design sense to make this look worthy of anyone's time.
+            <br></br><br></br>
+            But that's just the thing about these types of projects. You either dive in headfirst or you get stuck in analisys.
+            <br></br><br></br>
+            So without further ado, away we go!
+            <br></br><br></br>
+            <img src={startGif} className='start-gif' alt="start-gif" />
+            <h2>Chapter 4: The backend</h2>
+            
+
+
+            
+            
             
             
 

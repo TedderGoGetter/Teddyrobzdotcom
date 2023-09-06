@@ -34,7 +34,7 @@ function Synth() {
         <div className={beeped}>
             <br></br>
             It worked!
-            <br></br><br></br>
+            
         </div>
         </>
     )
