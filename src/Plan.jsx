@@ -206,10 +206,17 @@ function Plan() {
             <br></br><br></br>
             <img src={timerGif} className='timer-gif' alt="timer-gif" />
             <br></br><br></br>
-            Here we a looped chord.
+            Here we have a looped chord.
             <br></br><br></br>
             <LoopDemo/>
+            <br></br><br></br>
+            Now we want to do that, but with three of our own loops.
+            <br></br><br></br>
+            <ShortLoops/>
             <br></br>
+            
+
+
 
 
         </>

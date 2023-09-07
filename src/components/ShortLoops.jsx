@@ -10,6 +10,10 @@ function ShortLoops() {
         baseUrl: "https://tonejs.github.io/audio/casio/",
 
     }).toDestination();
+    
+    sampler.volume.value = -12;
+
+    Tone.Transport.bpm.value = 81;
 
     const osc = new Tone.Oscillator().toDestination();
     // repeated event every 8th note
