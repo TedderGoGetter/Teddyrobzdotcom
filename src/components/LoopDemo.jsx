@@ -21,15 +21,15 @@ function ShortLoops() {
     Tone.Transport.scheduleRepeat((time) => {
         // use the callback time to schedule events
         // osc.start(time).stop(time + 0.1);
-        sampler.triggerAttackRelease(["C1"], 0.5);
+        sampler.triggerAttackRelease(["C1", "E1", "G1", "B1"], 0.5);
     }, "4n");
     // transport must be started before it starts invoking events
 
     function PressPlay() {
         Tone.start()
-
+        // sampler.triggerAttackRelease(["C1"], 0.5);
         Tone.Transport.start();
-        // console.log("sampler is at ", sampler.volume.value)
+        console.log("sampler is at ", sampler.volume.value)
 
         if (beeped != 'beep-worked') {
             setBeeped('beep-worked')
