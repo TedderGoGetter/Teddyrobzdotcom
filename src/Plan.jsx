@@ -7,7 +7,7 @@ import startGif from './assets/start.gif'
 import timerGif from './assets/timer.gif'
 import Synth from './components/synth'
 import ShortLoops from './components/ShortLoops'
-import LoopDemo from './components/LoopDemo'
+// import LoopDemo from './components/LoopDemo'
 import * as Tone from 'tone'
 import './Plan.css'
 
@@ -208,7 +208,7 @@ function Plan() {
             <br></br><br></br>
             Here we have a looped chord.
             <br></br><br></br>
-            <LoopDemo/>
+            {/* <LoopDemo/> */}
             <br></br><br></br>
             Now we want to do that, but with three of our own loops.
             <br></br><br></br>

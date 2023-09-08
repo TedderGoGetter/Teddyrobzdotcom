@@ -10,7 +10,7 @@ function ShortLoops() {
     // new Audio(Instruments)
     // new Audio(Sparkles)
 
-    const sampler = new Tone.Sampler({
+    const samplerr = new Tone.Sampler({
         urls: {
             A1: "NPL1drms-1b4c525a.mp3",
             // A2: "A2.mp3",
@@ -19,7 +19,7 @@ function ShortLoops() {
 
     }).toDestination();
 
-    sampler.volume.value = -12;
+    samplerr.volume.value = -12;
 
     Tone.Transport.bpm.value = 81;
 
@@ -27,21 +27,21 @@ function ShortLoops() {
     // repeated event every 8th note
     Tone.Transport.scheduleRepeat((time) => {
         // use the callback time to schedule events
-        sampler.start(time).stop(time + 0.1);
-    }, "8n");
+        // sampler.start(time).stop(time + 0.1);
+        samplerr.triggerAttackRelease(["A1"], 100);
+    },"4:0:0");
     // transport must be started before it starts invoking events
 
     function PressPlay() {
         Tone.start()
-        sampler.triggerAttackRelease(["A1"], 10);
-        // Tone.Transport.start();
+        // sampler.triggerAttackRelease(["A1"], 10);
+        Tone.Transport.start();
         console.log('note played')
         
     }
 
     function PressStop() {
-        // Tone.Transport.stop();
-        sampler.stop()
+        Tone.Transport.stop();
     }
 
     return (
