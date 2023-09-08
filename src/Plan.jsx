@@ -15,6 +15,7 @@ function Plan() {
 
     return (
         <>
+            <ShortLoops/>
             hi <br></br>
             <br></br> 
             This website is very much still under construction, and I'm just a junior engineer.
