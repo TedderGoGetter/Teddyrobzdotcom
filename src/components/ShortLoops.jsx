@@ -2,14 +2,11 @@ import * as Tone from 'tone';
 import Drums from '../assets/NPL1drms.mp3'
 import Instruments from '../assets/NPL1inst.mp3'
 import Sparkles from '../assets/NPL1sprk.mp3'
+import { useState, useEffect, useRef } from 'react';
 
 function ShortLoops() {
 
-    // It's possible that Vercel will only host files if the import is justified. If so keep these in the code:
-    // new Audio(Drums)
-    // new Audio(Instruments)
-    // new Audio(Sparkles)
-
+    //All three of my samplers. Could they be just one with multiple outputs??
     const dSampler = new Tone.Sampler({
         urls: {
             A1: "NPL1drms-1b4c525a.mp3",
@@ -31,17 +28,18 @@ function ShortLoops() {
         baseUrl: "https://teddyrobz.vercel.app/assets/",
     }).toDestination();
 
-    dSampler.volume.value = -12;
+    //Volume knobs
+    // dSampler.volume.value = -12;
     iSampler.volume.value = -12;
     sSampler.volume.value = -12;
-
+    
     Tone.Transport.bpm.value = 81;
+    //Is this also the master bpm?
 
-    // const osc = new Tone.Oscillator().toDestination();
-    // repeated event every 8th note
     Tone.Transport.scheduleRepeat((time) => {
         // use the callback time to schedule events
-        // sampler.start(time).stop(time + 0.1);
+
+
         dSampler.triggerAttackRelease(["A1"], 100);
         iSampler.triggerAttackRelease(["A1"], 100);
         sSampler.triggerAttackRelease(["A1"], 100);
@@ -50,17 +48,41 @@ function ShortLoops() {
 
     function PressPlay() {
         Tone.start()
-        // sampler.triggerAttackRelease(["A1"], 10);
         Tone.Transport.start();
         console.log('note played')
+        console.log(dSampler.volume.value)
     }
 
     function PressStop() {
         Tone.Transport.stop();
     }
 
+
+
+    const [dVol, setDVol] = useState(-12)
+
+    const drumRef = useRef(dSampler)
+
+    useEffect(() => {
+        drumRef.current.volume.value = dVol
+    }, [dVol])
+
+    // I feel like this could be done inline in the onchange??
+    const ChangeDrums = (e) => {
+        // console.log(event.target.value);
+        setDVol(e.target.value);
+      };
+
     return (
         <>
+        drum volume is {dVol}
+        <input 
+        onChange={ChangeDrums} 
+        type="range" 
+        min={-20} 
+        max={20}
+        />
+
         <button onClick={PressPlay}>Play</button>
         <button onClick={PressStop}>Stop</button>
         </>

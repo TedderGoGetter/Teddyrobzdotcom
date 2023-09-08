@@ -15,7 +15,10 @@ function Plan() {
 
     return (
         <>
+            What I got so far:
+            <br></br><br></br>
             <ShortLoops/>
+            <br></br><br></br>
             hi <br></br>
             <br></br> 
             This website is very much still under construction, and I'm just a junior engineer.
