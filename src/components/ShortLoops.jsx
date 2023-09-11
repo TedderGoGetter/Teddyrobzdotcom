@@ -1,5 +1,5 @@
 import * as Tone from 'tone';
-import Drums from '../assets/NPL1drms.mp3'
+import Drums from '../assets/NPL1drms.mp3'  //these imports seem useless but vercel only deploys assets when imported.
 import Instruments from '../assets/NPL1inst.mp3'
 import Sparkles from '../assets/NPL1sprk.mp3'
 import { useState, useEffect, useRef } from 'react';
