@@ -28,10 +28,10 @@ function ShortLoops() {
         baseUrl: "https://teddyrobz.vercel.app/assets/",
     }).toDestination();
 
-    //Volume knobs
+    //Old olume knobs
     // dSampler.volume.value = -12;
-    iSampler.volume.value = -12;
-    sSampler.volume.value = -12;
+    // iSampler.volume.value = -12;
+    // sSampler.volume.value = -12;
     
     Tone.Transport.bpm.value = 81;
     //Is this also the master bpm?
@@ -58,7 +58,7 @@ function ShortLoops() {
     }
 
 
-
+    // drum volume fader. (simplify this code.)
     const [dVol, setDVol] = useState(-12)
 
     const drumRef = useRef(dSampler)
@@ -71,7 +71,37 @@ function ShortLoops() {
     const ChangeDrums = (e) => {
         // console.log(event.target.value);
         setDVol(e.target.value);
-      };
+    };
+
+    //
+    const [instVol, setInstVol] = useState(-12)
+
+    const instRef = useRef(iSampler)
+
+    useEffect(() => {
+        instRef.current.volume.value = instVol
+    }, [instVol])
+
+    const ChangeInst = (e) => {
+    // console.log(event.target.value);
+    setInstVol(e.target.value);
+    };
+
+    //
+    const [sprkVol, setSprkVol] = useState(-12)
+
+    const sprkRef = useRef(sSampler)
+
+    useEffect(() => {
+        sprkRef.current.volume.value = sprkVol
+        }, [sprkVol])
+
+    const ChangeSpark = (e) => {
+        // console.log(event.target.value);
+        setSprkVol(e.target.value);
+        };
+
+    
 
     return (
         <>
@@ -79,10 +109,26 @@ function ShortLoops() {
         <input 
         onChange={ChangeDrums} 
         type="range" 
-        min={-20} 
+        min={-100} 
         max={20}
         />
-
+        <br></br>
+        Instrument volume is {instVol}
+        <input 
+        onChange={ChangeInst} 
+        type="range" 
+        min={-100} 
+        max={20}
+        />
+        <br></br>
+        Sparkle volume is {sprkVol}
+        <input 
+        onChange={ChangeSpark} 
+        type="range" 
+        min={-100} 
+        max={20}
+        />
+        <br></br>
         <button onClick={PressPlay}>Play</button>
         <button onClick={PressStop}>Stop</button>
         </>

@@ -15,7 +15,7 @@ function Plan() {
 
     return (
         <>
-            What I got so far:
+            What I got so far (it's buggy)
             <br></br><br></br>
             <ShortLoops/>
             <br></br><br></br>

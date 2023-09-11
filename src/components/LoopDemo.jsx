@@ -42,12 +42,10 @@ function ShortLoops() {
         if (beeped != 'unbeeped') {
             setBeeped('unbeeped')
         }
-
     }
 
     return (
         <>
-        
         <button onClick={PressPlay}>Play</button>
         <button onClick={PressStop}>Stop</button>
         <div className={beeped}>
