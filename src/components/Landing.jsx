@@ -1,5 +1,4 @@
 import Coverart from '../assets/Coverart.jpg'
-import Mpcicon from '../assets/Mpcicon.png'
 import './Landing.css'
 
 function Landing(){
