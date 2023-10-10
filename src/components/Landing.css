@@ -1,9 +1,11 @@
-.out {
-    display:none;
+
+.main-container {
+    height: 100%;
+    padding: 70px 0;
+    border: 3px solid green;
+    text-align: center;
 }
 
 .cover-art {
-    width: 70%;
-    padding: 10%;
-    padding-bottom: 30%;
+    width: 50vw;
 }
